@@ -1,0 +1,5 @@
+{
+    "restructuredtext.confPath": "${workspaceFolder}\\docs\\source",
+    "python.testing.pytestEnabled": true,
+    "python.testing.cwd": "tests"
+}
