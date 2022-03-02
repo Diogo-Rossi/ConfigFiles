@@ -37,7 +37,7 @@ class Actions:
             link = file["from"]
             destination = file["to"]
             fileName = link.rsplit("/", 1)[-1]
-            if input("> Create file '" + fileName + "' ([y]/n)? ") != "n":
+            if input("\n> Create file '" + fileName + "' ([y]/n)? ") != "n":
                 fullPathFile = os.path.join(
                     self.path, baseFolder, destination, fileName)
                 
@@ -62,7 +62,8 @@ def initApp(myActions):
     for action in myActions.actions:
         optionNumber += 1
         print(f" {optionNumber} - {action}")
-    optionSelected = int(input("> "))
+    optionSelected = int((lambda x: -1 if x == '' else x)(input("> ")))
+    if optionSelected < 0: sys.exit()
     
     print("============================================")
     print(" FOLDER NAME: ")
