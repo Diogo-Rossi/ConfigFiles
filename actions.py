@@ -3,19 +3,14 @@ import sys
 import json
 import urllib.request
 from pathvalidate import sanitize_filename
-import configparser
-import ssl
 
-ssl._create_default_https_context = ssl._create_unverified_context
+
+URL = 'https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/actions-diogo.json'
 
 class Actions:
-
+    
     def __init__(self, path=''):
-        path_config_file = self.__getIniPath('config.ini')
-        config = configparser.ConfigParser()
-        config.read(path_config_file)
-        config_link = config['DEFAULT']['config_link']
-        
+        config_link = URL
         self.path = path
         self.config = self.__loadConfig(config_link)
         self.actions = self.__loadActions(self.config)
@@ -28,14 +23,11 @@ class Actions:
     def __loadActions(self, config):
         return [item['type'] for item in config]
     
-    def __getIniPath(self, filename):
-        return filename if os.path.isfile(filename) else os.path.join(os.path.dirname(sys.executable), filename)
-    
     def __createFoldersFromList(self, folders, baseFolder=''):
         baseFolder = sanitize_filename(baseFolder)
     
         for folder in folders:
-            if input("\n> Create folder '" + folder + "' ([y]/n)? ") != "n":
+            if input("> Create folder '" + folder + "' ([y]/n)? ") != "n":
                 folderName = os.path.join(self.path, baseFolder, folder)
                 os.makedirs(folderName, True)
     
@@ -45,12 +37,12 @@ class Actions:
             link = file["from"]
             destination = file["to"]
             fileName = link.rsplit("/", 1)[-1]
-            if input("\n> Create file '" + fileName + "' ([y]/n)? ") != "n":
+            if input("> Create file '" + fileName + "' ([y]/n)? ") != "n":
                 fullPathFile = os.path.join(
                     self.path, baseFolder, destination, fileName)
                 
                 if not os.path.isfile(fullPathFile):
-                    print(f'BAIXANDO.... {link}')
+                    print(f'DOWNLOADING.... {link}')
                     urllib.request.urlretrieve(link, fullPathFile)
     
     def doActions(self, actionType, folderName):
@@ -64,7 +56,7 @@ class Actions:
 def initApp(myActions):
     # INTERFACE VIA TERMINAL
     print("============================================")
-    print(" ESCOLHA UMA OPÇÃO: ")
+    print(" CHOOSE ONE OPTION: ")
     print("============================================")
     optionNumber = 0
     for action in myActions.actions:
@@ -73,22 +65,22 @@ def initApp(myActions):
     optionSelected = int(input("> "))
     
     print("============================================")
-    print(" NOME DA PASTA: ")
+    print(" FOLDER NAME: ")
     print("============================================")
     folderName = input("> ")
     
     print("============================================")
-    print(" CONFIRMA? (s/n) ")
+    print(" CONFIRM ([y]/n)? ")
     print(f": {myActions.actions[optionSelected-1]}")
     print(f": {folderName}")
     print("============================================")
     confirm = (input("> "))
     # ./INTERFACE VIA TERMINAL
     
-    if confirm == "s":
+    if confirm != "n":
         myActions.doActions(myActions.actions[optionSelected-1], folderName)
     
-    input(": Pressione ENTER para Terminar... ")
+    input("\n: Press ENTER to finish... ")
 
 
 path = '.' if sys.argv else sys.argv[1]
