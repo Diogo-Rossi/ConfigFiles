@@ -1,0 +1,3 @@
+PmSond	LitoStr	FacieStr	LitoNum	Zona
+0000	ARN	ARN	38	ND
+0000	ARN	ARN	38	ND
