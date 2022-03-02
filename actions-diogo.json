@@ -7,119 +7,75 @@
                 "docs",
                 "icons",
                 "src",
-                "tests"
+                "tests/resources"
             ],
             "files": [{
-                    "from": "https://gitlab.com/DiogoRossi/Configs/-/blob/main/vscode/projects/.gitignore",
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.gitignore",
                     "to": ""
                 },
                 {
-                    "from": "https://gitlab.com/DiogoRossi/Configs/-/blob/main/vscode/projects/desktop.ini",
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/README.md",
                     "to": ""
+                },
+                {
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/desktop.ini",
+                    "to": ""
+                },
+                {
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/custom.mustache",
+                    "to": ".vscode"
+                },
+                {
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/launch.json",
+                    "to": ".vscode"
+                },
+                {
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/settings.json",
+                    "to": ".vscode"
+                },
+                {
+                    "from": "https://github.com/Diogo-Rossi/ConfigFiles/raw/public/icons/icon.ico",
+                    "to": "icons"
+                },
+                {
+                    "from": "https://github.com/Diogo-Rossi/ConfigFiles/raw/public/icons/icon.png",
+                    "to": "icons"
+                },
+                {
+                    "from": "https://github.com/Diogo-Rossi/ConfigFiles/raw/public/icons/icon.exe",
+                    "to": "icons"
                 }
             ]
         }
     },
     {
-        "type": "Vlog",
+        "type": "Scratch-Test",
         "actions": {
             "folders": [
-                "video",
-                "audio",
-                "imagens/fotos"
+                "04_FotosEnsaioST",
+                "05_FotosConjunto"
             ],
             "files": [{
-                    "from": "http://127.0.0.1:5500/samples/cdftv-vlog.prproj",
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/scratch/01-seguimentos.txt",
                     "to": ""
                 },
                 {
-                    "from": "http://127.0.0.1:5500/samples/miniatura.psd",
-                    "to": "imagens"
-                }
-            ]
-        }
-    },
-    {
-        "type": "CAC",
-        "actions": {
-            "folders": [
-                "video",
-                "audio",
-                "imagens/fotos"
-            ],
-            "files": [{
-                    "from": "http://127.0.0.1:5500/samples/cdftv-cac.prproj",
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/scratch/02-litos.txt",
                     "to": ""
                 },
                 {
-                    "from": "http://127.0.0.1:5500/samples/miniatura.psd",
-                    "to": "imagens"
-                }
-            ]
-        }
-    },
-    {
-        "type": "Dicionário do Programador",
-        "actions": {
-            "folders": [
-                "video",
-                "audio",
-                "imagens/fotos"
-            ],
-            "files": [{
-                    "from": "http://127.0.0.1:5500/samples/cdftv-dicionario-do-programador.prproj",
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/scratch/03-results.txt",
                     "to": ""
                 },
                 {
-                    "from": "http://127.0.0.1:5500/samples/miniatura.psd",
-                    "to": "imagens"
-                }
-            ]
-        }
-    },
-    {
-        "type": "Decode CDF 2030",
-        "actions": {
-            "folders": [
-                "video",
-                "audio",
-                "imagens/fotos"
-            ],
-            "files": [{
-                    "from": "http://127.0.0.1:5500/samples/cdftv-decode-cdf-2030.prproj",
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/scratch/06-pbasica.txt",
                     "to": ""
                 },
                 {
-                    "from": "http://127.0.0.1:5500/samples/miniatura.psd",
-                    "to": "imagens"
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/scratch/07-perfilPor.txt",
+                    "to": ""
                 }
             ]
-        }
-    },
-    {
-        "type": "DevMinute (Instagram)",
-        "actions": {
-            "folders": [
-                "video",
-                "audio"
-            ],
-            "files": [{
-                "from": "http://127.0.0.1:5500/samples/cdftv-instagram-devminute.prproj",
-                "to": ""
-            }]
-        }
-    },
-    {
-        "type": "Stories (Instagram)",
-        "actions": {
-            "folders": [
-                "video",
-                "audio"
-            ],
-            "files": [{
-                "from": "http://127.0.0.1:5500/samples/cdftv-instagram-stories.prproj",
-                "to": ""
-            }]
         }
     }
 ]
