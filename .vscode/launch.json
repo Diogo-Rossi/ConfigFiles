@@ -22,7 +22,7 @@
             "purpose": ["debug-in-terminal"],
         },
         {
-            "name": "Launch JavaScript",
+            "name": "JavaScript",
             "type": "pwa-node",
             "request": "launch",
             "program": "${file}",
