@@ -1,5 +1,6 @@
 {
     "esbonio.sphinx.confDir": "${workspaceFolder}\\docs\\source",
+    "autoDocstring.customTemplatePath": "./.vscode/custom.mustache",
     "python.testing.pytestEnabled": true,
     "python.testing.cwd": "tests"
 }
