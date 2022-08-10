@@ -24,6 +24,10 @@
                 {
                     "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/custom.mustache",
                     "to": ".vscode"
+                },                
+                {
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/numpy.mustache",
+                    "to": ".vscode"
                 },
                 {
                     "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/launch.json",
