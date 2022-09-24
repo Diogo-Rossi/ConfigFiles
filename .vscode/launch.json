@@ -11,6 +11,7 @@
             "program": "${file}",
             "console": "externalTerminal",
             "cwd": "${fileDirname}",
+            "justMyCode": true
         },
         {
             "name": "Python: integrated terminal",
@@ -20,6 +21,7 @@
             "console": "integratedTerminal",
             "cwd": "${fileDirname}",
             "purpose": ["debug-in-terminal"],
+            "justMyCode": true
         },
         {
             "name": "JavaScript",
