@@ -6,12 +6,12 @@
 {{#parametersExist}}
 Parameters:
 {{#args}}
-    {{var}} ({{typePlaceholder}}): {{#placeholder}}[short description]{{/placeholder}}.
+    {{var}} ({{typePlaceholder}}): {{#placeholder}}_short_description_{{/placeholder}}.
         {{descriptionPlaceholder}}
     
 {{/args}}
 {{#kwargs}}
-    {{var}} ({{typePlaceholder}}, optional): Defaults to {{&default}}. {{#placeholder}}[short description]{{/placeholder}}.
+    {{var}} ({{typePlaceholder}}, optional): Defaults to {{&default}}. {{#placeholder}}_short_description_{{/placeholder}}.
         {{descriptionPlaceholder}}.
     
 {{/kwargs}}
