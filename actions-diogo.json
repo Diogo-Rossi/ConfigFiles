@@ -34,6 +34,14 @@
                     "to": ".vscode"
                 },
                 {
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/cspell.json",
+                    "to": ".vscode"
+                },
+                {
+                    "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/bookmarks.json",
+                    "to": ".vscode"
+                },
+                {
                     "from": "https://raw.githubusercontent.com/Diogo-Rossi/ConfigFiles/public/.vscode/settings.json",
                     "to": ".vscode"
                 },
