@@ -25,7 +25,7 @@
         },
         {
             "name": "JavaScript",
-            "type": "pwa-node",
+            "type": "node",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
