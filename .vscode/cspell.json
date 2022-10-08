@@ -1,0 +1,8 @@
+// cSpell Settings
+{
+    // Version of the setting file.  Always 0.2
+    "version": "0.2",
+    // Specify paths/files to ignore.
+    "ignorePaths": [],
+    "words": []
+}
