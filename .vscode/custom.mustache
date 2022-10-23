@@ -6,12 +6,12 @@
 {{#parametersExist}}
 Parameters:
 {{#args}}
-    {{var}} ({{typePlaceholder}}): {{#placeholder}}_short_description_{{/placeholder}}.
+    `{{var}}` (`{{typePlaceholder}}`): {{#placeholder}}_short_description_{{/placeholder}}.
         {{descriptionPlaceholder}}
     
 {{/args}}
 {{#kwargs}}
-    {{var}} ({{typePlaceholder}}, optional): Defaults to {{&default}}. {{#placeholder}}_short_description_{{/placeholder}}.
+    `{{var}}` (`{{typePlaceholder}}`, optional): Defaults to `{{&default}}`. {{#placeholder}}_short_description_{{/placeholder}}.
         {{descriptionPlaceholder}}.
     
 {{/kwargs}}
@@ -19,22 +19,22 @@ Parameters:
 {{#exceptionsExist}}
 Raises:
 {{#exceptions}}
-    {{type}}:
+    `{{type}}`:
         {{descriptionPlaceholder}}
     
 {{/exceptions}}
 {{/exceptionsExist}}
 {{#returnsExist}}
 Returns:
-{{#returns}}
-    {{typePlaceholder}}: {{descriptionPlaceholder}}
+`{{#returns}}`
+    `{{typePlaceholder}}`: {{descriptionPlaceholder}}
     
 {{/returns}}
 {{/returnsExist}}
 {{#yieldsExist}}
 Yields:
-{{#yields}}
-    {{typePlaceholder}}: {{descriptionPlaceholder}}
+`{{#yields}}`
+    `{{typePlaceholder}}`: {{descriptionPlaceholder}}
     
 {{/yields}}
 {{/yieldsExist}}
